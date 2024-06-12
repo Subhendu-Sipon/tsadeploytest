@@ -23,6 +23,7 @@ import FooterSection from "@/components/edits/footersection/FooterSection";
 import LocomotiveScroll from "locomotive-scroll";
 import ProjectSectionDemo from "@/components/edits/projectSection/ProjectSectionDemo";
 import ServiceSectionTest from "@/components/edits/serviceSection/ServiceSectionTest";
+import { CardHoverEffectDemo } from "@/components/edits/CardHoverEffectDemo";
 
 export default function Home() {
 
@@ -35,19 +36,23 @@ export default function Home() {
         <BackgroundVideo />
         <HeroScrollDemo />
       </div>
-      <ProjectSectionDemo />
       <ServiceSectionTest />
       <HeroParallaxDemo />
-      <Airdops />
+      <ProjectSectionDemo />
+      {/* <Airdops /> */}
       <div className="h-screen w-full overflow-hidden">
       <ContactSection />
       </div>
-      <div className="h-screen w-full">
-      
-      <Spline scene="https://prod.spline.design/8qVMP393ZbAiyO7W/scene.splinecode" /> 
+      <div className="h-screen w-full bg-green-100">
+      <CardHoverEffectDemo />
+      {/* <Spline scene="https://prod.spline.design/8qVMP393ZbAiyO7W/scene.splinecode" />  */}
       </div>
-      
+      <div className=" h-screen w-full">
       <TestimonialSectionScroll />
+      </div>
+      <div className=" h-screen w-full">
+        </div>
+      
       <div className="overflow-hidden">
       <BackgroundScrollVideo />
       </div>

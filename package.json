@@ -17,6 +17,8 @@
     "@popperjs/core": "^2.11.8",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@react-three/drei": "^9.106.0",
+    "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^2.2.6",
     "@studio-freight/lenis": "^1.0.42",
     "@tabler/icons-react": "^3.3.0",

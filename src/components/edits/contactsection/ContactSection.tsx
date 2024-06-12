@@ -1,8 +1,11 @@
 import Spline from "@splinetool/react-spline";
+import Image from "next/image";
+import ContactImage from '@/assets/ContactImage.jpg'
 import React, { useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import ScrollSection from "../scrollanimation/ScrollSection";
 
 function ContactSection() {
 
@@ -53,7 +56,7 @@ function ContactSection() {
     <div>
       <div className="flex">
         <div  className="w-1/2 h-screen">
-          <Spline scene="https://prod.spline.design/TmbloYanDME-iPn9/scene.splinecode" />
+          <Image src={ContactImage} height={1000} alt="contactimage" className="h-screeen w-full" />
         </div>
         <div className="w-1/2 h-screen justify-center align-middle content-center bg-sky-200">
           <div className="contact-form">
