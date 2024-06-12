@@ -38,13 +38,13 @@ export default function Home() {
       <ProjectSectionDemo />
       <ServiceSectionTest />
       <HeroParallaxDemo />
-      <Airdops />
+{/*       <Airdops /> */}
       <div className="h-screen w-full overflow-hidden">
-      <ContactSection />
+{/*       <ContactSection /> */}
       </div>
       <div className="h-screen w-full">
       
-      <Spline scene="https://prod.spline.design/8qVMP393ZbAiyO7W/scene.splinecode" /> 
+{/*       <Spline scene="https://prod.spline.design/8qVMP393ZbAiyO7W/scene.splinecode" />  */}
       </div>
       
       <TestimonialSectionScroll />
