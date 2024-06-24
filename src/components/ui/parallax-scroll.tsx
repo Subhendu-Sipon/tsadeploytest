@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion, AnimatePresence } from "framer-motion"
 import Image from "next/image";
 import { cn } from "@/utils/cn";
 import { BackgroundGradient } from "./background-gradient";
+import Image1 from "@/assets/photo1.jpg";
 
 export const ParallaxScroll = ({
     images,
@@ -53,6 +54,7 @@ export const ParallaxScroll = ({
                             key={"grid-1" + idx}
                             onClick={() => handleClick(el)}
                         >
+                            
                             <Image
                                 src={el}
                                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl"

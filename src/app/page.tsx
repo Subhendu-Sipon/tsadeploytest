@@ -43,7 +43,7 @@ export default function Home() {
       <div className="h-screen w-full overflow-hidden">
       <ContactSection />
       </div>
-      <div className="h-screen w-full bg-green-100">
+      <div className="h-screen w-full bg-black">
       <CardHoverEffectDemo />
       {/* <Spline scene="https://prod.spline.design/8qVMP393ZbAiyO7W/scene.splinecode" />  */}
       </div>

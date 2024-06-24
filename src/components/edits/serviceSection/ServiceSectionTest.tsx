@@ -10,7 +10,7 @@ export default function ServiceSectionTest() {
       title: "Marketing",
       value: "marketing",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-black to-gray-600">
           <p>Marketing Solutions</p>
           <MarketingContent />
         </div>
@@ -20,7 +20,7 @@ export default function ServiceSectionTest() {
       title: "Brand",
       value: "brand",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-black to-gray-600">
           <p>Brand Solutions</p>
           <BrandContent />
         </div>
@@ -30,7 +30,7 @@ export default function ServiceSectionTest() {
       title: "Media",
       value: "media",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-black to-gray-600">
           <p>Playground tab</p>
           <MediaContent />
         </div>
@@ -40,7 +40,7 @@ export default function ServiceSectionTest() {
       title: "Tech",
       value: "tech",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-black to-gray-600">
           <p>Tech solutions</p>
           <TechContent />
         </div>
@@ -50,7 +50,7 @@ export default function ServiceSectionTest() {
       title: "Resources",
       value: "resources",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-black to-gray-600">
           <p>Resources</p>
           <ResourcesContent />
         </div>
@@ -59,7 +59,7 @@ export default function ServiceSectionTest() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[35rem] [perspective:1000px] relative b flex flex-col max-w-6xl mx-auto w-[180rem]  items-start justify-start my-20">
+    <div className="h-[20rem] md:h-[35rem] [perspective:1000px] relative b flex flex-col max-w-6xl mx-auto w-[180rem]  items-center justify-center my-20">
       <Tabs tabs={tabs} />
     </div>
   );

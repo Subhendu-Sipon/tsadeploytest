@@ -78,7 +78,7 @@ function TestimonialSectionScroll() {
         start: "-900 top",
         end: "center top",
         scrub: 1,
-        markers: true,
+        markers: false,
       },
     });
 
@@ -91,7 +91,7 @@ function TestimonialSectionScroll() {
         start: "-600 top",
         end: "center top",
         scrub: 1,
-        markers:true,
+        markers:false,
       },
     });
   });
