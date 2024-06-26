@@ -65,7 +65,7 @@ function BackgroundScrollVideo() {
           <h1 className="text-15xl font-bold">TSA</h1>
 
           <div className="flex">
-            <div className="flex w-1/3 mt-72">
+            <div className="flex w-1/3 mt-64">
               <Link href="/about" className="text-white mx-2">
                 About
               </Link>
@@ -82,7 +82,7 @@ function BackgroundScrollVideo() {
                 Privacy
               </Link>
             </div>
-            <div className="flex justify-center space-x-6 mt-72 w-1/3">
+            <div className="flex justify-center space-x-6 mt-64 w-1/3">
               <a
                 href="https://www.linkedin.com"
                 aria-label="LinkedIn"
@@ -116,7 +116,7 @@ function BackgroundScrollVideo() {
                 <AiFillFacebook className="h-8 w-8" />
               </a>
             </div>
-            <div className="mt-72 w-1/3 text-right">
+            <div className="mt-64 w-1/3 text-right">
               <p className="text-sm">Proudly created in India.</p>
               <p className="text-sm">All Right Reserved.</p>
             </div>
