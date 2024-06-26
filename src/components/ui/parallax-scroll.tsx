@@ -101,10 +101,10 @@ export const ParallaxScroll = ({
                     className="fixed inset-0 flex items-center justify-center z-50"
                     onClick={handleClose}
                 >
-                    <div className="max-w-full max-h-full">
+                    <div className="">
                         <video
                             src={selectedVideo}
-                            className="w-full h-screen"
+                            className="w-full h-[572px] rounded-[20px]"
                             controls
                             autoPlay
                             loop
