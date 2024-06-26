@@ -94,23 +94,25 @@ export const ParallaxScroll = ({
             <AnimatePresence>
                 {selectedVideo && (
                     <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.2 }}
-                    className="fixed inset-0 flex items-center justify-center z-50"
-                    onClick={handleClose}
-                >
-                    <div className="">
-                        <video
-                            src={selectedVideo}
-                            className="w-full h-[572px] rounded-[20px]"
-                            controls
-                            autoPlay
-                            loop
-                        />
-                    </div>
-                </motion.div>
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed inset-0 flex items-center justify-center z-50"
+                        style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+                        onClick={handleClose}
+                    >
+                        <div className="max-w-[90%] mx-auto">
+                            <video
+                                src={selectedVideo}
+                                className="w-full rounded-lg"
+                                controls
+                                autoPlay
+                                loop
+                                
+                            />
+                        </div>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </div>
