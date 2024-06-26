@@ -31,7 +31,7 @@ function BackgroundScrollVideo() {
     });
 
     gsap.from(textRef.current, {
-      scale: 100,
+      scale: 200,
       y: 350,
       delay: 5,
       scrollTrigger: {
@@ -55,7 +55,7 @@ function BackgroundScrollVideo() {
         muted
       />
 
-      <div ref={footerRef} className="fixed h-1/3 bg-purple-300 bottom-0 w-full"></div>
+      <div ref={footerRef} className="fixed h-[100px] bg-purple-300 bottom-0 w-full"></div>
 
       <footer
         ref={textRef}
