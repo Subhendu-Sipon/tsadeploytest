@@ -1,21 +1,18 @@
 "use client";
 import { ParallaxScroll } from "../ui/parallax-scroll";
-import Image1 from "@/assets/photo1.jpg";
-import Image2 from "@/assets/photo2.jpg";
-import Image3 from "@/assets/photo3.jpg";
 
 export function ParallaxScrollDemo() {
-  return <ParallaxScroll images={images} />;
+  return <ParallaxScroll videos={videourl} />;
 }
 
-const images = [
-  Image1.src,
-  Image2.src,
-  Image3.src,
-  Image2.src,
-  Image3.src,
-  Image1.src,
-  Image3.src,
-  Image2.src,
-  Image1.src,
+const videourl = [
+  'https://mohanpranit.netlify.app/static/media/Video1.1299c79f322dc4b88487.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video1.1299c79f322dc4b88487.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video1.1299c79f322dc4b88487.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video2.9375b53a964615e04b0f.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video2.9375b53a964615e04b0f.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video2.9375b53a964615e04b0f.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video3.3860567b58d6304ba456.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video3.3860567b58d6304ba456.mp4',
+  'https://mohanpranit.netlify.app/static/media/Video3.3860567b58d6304ba456.mp4',
 ];

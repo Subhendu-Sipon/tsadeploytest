@@ -2,7 +2,7 @@
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animations";
 import Image from "next/image";
-import aboutbg from "@/assets/aboutimg.webp"
+import aboutbg from "@/assets/aboutimg.webp";
 import { LayoutGridDemo } from "./LayoutGridDemo";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { InfiniteMovingCardsDemo } from "./InfiniteMovingCardsDemo";
@@ -23,20 +23,8 @@ export function HeroScrollDemo() {
           </>
         }
       >
-        {/* <Image
-          src={aboutbg}
-          alt="hero"
-          height={720}
-          width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
-          draggable={false}
-        /> */}
-        
-        <ParallaxScrollDemo/>
+        <ParallaxScrollDemo />
       </ContainerScroll>
     </div>
   );
 }
-
-
-

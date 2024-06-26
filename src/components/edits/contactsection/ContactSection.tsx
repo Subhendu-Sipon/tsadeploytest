@@ -1,38 +1,23 @@
 import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import ContactImage from '@/assets/ContactImage.jpg'
-import React, { useState, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import ScrollSection from "../scrollanimation/ScrollSection";
+import React, { useState, useRef, useEffect } from "react";
+import lottie from 'lottie-web';
+import { SignupFormDemo } from "../SignupFormDemo";
 
 function ContactSection() {
 
-//   const scrollRef = useRef();
-//   const mainRef = useRef();
+  const animationContainer = useRef(null);
 
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   useGSAP(() => {
-//     gsap.from(scrollRef.current, {
-//       y: 0,
-//     });
-
-//     gsap.to(scrollRef.current, {
-//       y: -3000,
-//       opacity: 1,
-//       delay: 3,
-//       scrollTrigger: {
-//         trigger: mainRef.current,
-//         start: "top top",
-//         end: "bottom top",
-//         scrub: 1,
-//         pin: true,
-//         markers: true,
-//       },
-//     });
-//   });
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://lottie.host/86fa6733-183b-45b0-8bb6-04cbc29d9343/ICt74By09D.json'
+    });
+  }, []);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -54,15 +39,12 @@ function ContactSection() {
 
   return (
     <div>
-      <div className="flex">
-        <div  className="w-1/2 h-screen">
-          <Image src={ContactImage} height={1000} alt="contactimage" className="h-screeen w-full" />
-        </div>
-        <div className="w-1/2 h-screen justify-center align-middle content-center bg-sky-200">
-          <div className="contact-form">
+      <div className="flex bg-cover bg-full bg-[url('https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-black-orange-3d-abstract-wallpaper-free-photo.jpg')]">
+        <div className=" h-screen w-1/2 justify-center align-middle content-center ">
+          {/* <div className="contact-form">
             <form
               onSubmit={handleSubmit}
-              className="max-w-md mx-auto mt-8 space-y-6 rounded-3xl bg-gray-900/70 p-8 backdrop-filter backdrop-blur-lg"
+              className="max-w-md mx-auto mt-8 space-y-6 rounded-3xl p-8 backdrop-filter bg-transparent backdrop-blur-lg"
             >
               <div>
                 <label htmlFor="name" className="text-white">
@@ -73,7 +55,7 @@ function ContactSection() {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="block w-full mt-2 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50"
+                  className="block w-full mt-2 bg-gray-700 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50"
                   required
                 />
               </div>
@@ -86,7 +68,7 @@ function ContactSection() {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full mt-2 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50 h-8"
+                  className="block w-full mt-2 bg-gray-700 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50 h-8"
                   required
                 />
               </div>
@@ -99,7 +81,7 @@ function ContactSection() {
                   id="subject"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  className="block w-full mt-2 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50 h-8"
+                  className="block w-full mt-2 bg-gray-700 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50 h-8"
                   required
                 />
               </div>
@@ -111,7 +93,7 @@ function ContactSection() {
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="block w-full mt-2 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50"
+                  className="block w-full mt-2 bg-gray-700 text-white border-none shadow-none focus:border-futuristic-blue focus:ring-futuristic-blue disabled:opacity-50"
                   required
                 />
               </div>
@@ -124,8 +106,15 @@ function ContactSection() {
                 </button>
               </div>
             </form>
-          </div>
+          </div> */}
+          <SignupFormDemo />
         </div>
+        <div className="">
+          <div ref={animationContainer} className=" mix-blend-screen"></div>
+          
+          CONTACT US
+        </div>
+        
       </div>
     </div>
   );

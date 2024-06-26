@@ -123,32 +123,39 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    thumbnail: string;
+    videoId: string; // New property: YouTube video ID
   };
   translate: MotionValue<number>;
 }) => {
+  const videoId = product.videoId; // Extract the video ID from the product object
+
   return (
     <motion.div
       style={{
         x: translate,
       }}
-      whileHover={{
-        y: -20,
-      }}
-      key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
       <Link
         href={product.link}
-        className="block group-hover/product:shadow-2xl "
       >
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+        {/* <iframe
+          width="560"
+          height="315"
+          src={`https://www.youtube.com/embed/${videoId}`}
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          className="object-cover object-left-top absolute h-full w-full"
           alt={product.title}
-        />
+        /> */}
+
+        <iframe
+          width="480"
+          height="390"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1`}
+          allowFullScreen
+        ></iframe>
+
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-60 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">

@@ -28,6 +28,9 @@ import { CardHoverEffectDemo } from "@/components/edits/CardHoverEffectDemo";
 export default function Home() {
 
   return (
+    // <div>
+    //   <ContactSection />
+    // </div>
     
 
     <div>
@@ -38,14 +41,14 @@ export default function Home() {
       </div>
       <ServiceSectionTest />
       <HeroParallaxDemo />
-      <ProjectSectionDemo />
-      {/* <Airdops /> */}
+      <LogoMarqueeDemo />
       <div className="h-screen w-full overflow-hidden">
-      <ContactSection />
+      {/* Put contact section here */}
+      <ContactSection/>
+      
       </div>
       <div className="h-screen w-full bg-black">
       <CardHoverEffectDemo />
-      {/* <Spline scene="https://prod.spline.design/8qVMP393ZbAiyO7W/scene.splinecode" />  */}
       </div>
       <div className=" h-screen w-full">
       <TestimonialSectionScroll />
@@ -56,13 +59,6 @@ export default function Home() {
       <div className="overflow-hidden">
       <BackgroundScrollVideo />
       </div>
-
-
-
-      {/* <div className="h-screen w-full">
-      <SplitSlideShow />
-      </div> */}
-      {/* <FooterSection /> */}
     </div>
   );
 }
