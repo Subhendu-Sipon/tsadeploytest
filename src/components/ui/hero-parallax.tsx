@@ -1,12 +1,6 @@
 "use client";
-import React from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  MotionValue,
-} from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,6 +11,7 @@ export const HeroParallax = ({
     title: string;
     link: string;
     thumbnail: string;
+    videoId: string;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -28,7 +23,7 @@ export const HeroParallax = ({
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 90, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -54,10 +49,11 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
   return (
     <div
       ref={ref}
-      className="h-[280vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-slate-300"
+      className="h-[280vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto perspective-[500px] transform-style-preserve-3d bg-slate-300"
     >
       <Header />
       <motion.div
@@ -69,31 +65,23 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+        <motion.div className="flex flex-row-reverse space-x-reverse h-[400px] space-x-20 mb-20">
+          {firstRow.map((product, index) => (
+            <ProductCard key={index} product={product} translate={translateX} />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product) => (
+        <motion.div className="flex flex-row mb-20 space-x-20">
+          {secondRow.map((product, index) => (
             <ProductCard
+              key={index}
               product={product}
               translate={translateXReverse}
-              key={product.title}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+          {thirdRow.map((product, index) => (
+            <ProductCard key={index} product={product} translate={translateX} />
           ))}
         </motion.div>
       </motion.div>
@@ -103,7 +91,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-20 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-20 px-4 w-full left-0 top-0">
       <h1 className="text-ultimateproject md:text-7xl font-bold dark:text-white">
         The Ultimate <br /> project works
       </h1>
@@ -123,11 +111,17 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    videoId: string; // New property: YouTube video ID
+    videoId: string;
   };
-  translate: MotionValue<number>;
+  translate: any; // Replace 'any' with specific type if needed
 }) => {
-  const videoId = product.videoId; // Extract the video ID from the product object
+  const videoId = product.videoId;
+
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    iframeRef.current?.contentWindow.postMessage('autoplay', '*');
+  }, [iframeRef]);
 
   return (
     <motion.div
@@ -135,27 +129,16 @@ export const ProductCard = ({
         x: translate,
       }}
     >
-      <Link
-        href={product.link}
-      >
-        {/* <iframe
-          width="560"
-          height="315"
-          src={`https://www.youtube.com/embed/${videoId}`}
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          className="object-cover object-left-top absolute h-full w-full"
-          alt={product.title}
-        /> */}
-
+      <Link href={product.link}>
         <iframe
-          width="480"
-          height="390"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1`}
+          width="540px"
+          height="304px"
+          src={`https://d3dm4v3lhy01si.cloudfront.net/f50u8q%2Ffile%2Fbed0d6c0f6b9aefe10e80117b0543948_08709e5d03c1e24009966dc6edd10001.mp4?response-content-disposition=inline%3Bfilename%3D%22bed0d6c0f6b9aefe10e80117b0543948_08709e5d03c1e24009966dc6edd10001.mp4%22%3B&response-content-type=video%2Fmp4&Expires=1719658905&Signature=KHQPT8SRUSK5kCDrrhioqQ4aYdGAdp-17SkqU5~l8xZfCjOTkJsjWGsgTV7mG8NSa6diF1HKZ1n7N3tEPPlVpHu5j4lYR-YMjgnL7haJZNaR64Qbw5y1bzFhmNAbfjQQ6nx~7AI8D5qRyO1yZiUM8GjjyphC4n-mMFGOsZX9Ai0ZfajHDb9ZouWR7qx16Ey8hEIHerDtlkSl17W59rYitl8aAoNXfMnUpSv4bq71WxLlnTr0DsP2AOZRiOZVgE8EYpnAiBX3vhiQSxcthVE1K0q85Wh9owbfUsZeXnQmFUpjORDz1saMGszoRrXBNY2HHwTR6Q41RolVFJ926dDXNA__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ`}
           allowFullScreen
-        ></iframe>
-
+          className="rounded-lg overflow-hidden object-cover"
+          allow="autoplay"
+        />
+       
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-60 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">

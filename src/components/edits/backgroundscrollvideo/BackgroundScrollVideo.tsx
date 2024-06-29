@@ -31,7 +31,7 @@ function BackgroundScrollVideo() {
     });
 
     gsap.from(textRef.current, {
-      scale: 200,
+      scale: 50,
       y: 350,
       delay: 5,
       scrollTrigger: {
@@ -40,7 +40,7 @@ function BackgroundScrollVideo() {
         end: "bottom top",
         scrub: 1,
         pin: true,
-        markers: false,
+        markers: true,
       },
     });
   });

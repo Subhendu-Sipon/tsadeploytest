@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import LogoImage from "@/assets/TSALogoNoBg.png";
+import LogoImage2 from "@/assets/bgblack.png";
 import Image from "next/image"
 
 const menuLinks = [
@@ -82,13 +83,20 @@ const MenuDemo = () => {
           </Link>
         </div>
         <div className="menu-open text-white " onClick={toggleMenu}>
-          MENU
+          <GiHamburgerMenu size={32}/>
         </div>
       </div>
       <div className="menu-overlay">
         <div className="menu-overlay-bar">
           <div className="menu-logo">
-            <Link href="/">TSA</Link>
+            <Link href="/">
+            <Image
+              src={LogoImage2}
+              alt="logo"
+              height="64"
+              width="64"
+            />
+            </Link>
           </div>
           <div className="menu-close" onClick={toggleMenu}>
             <p>CLOSE</p>

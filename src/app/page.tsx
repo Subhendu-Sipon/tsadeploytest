@@ -3,7 +3,6 @@ import Image from "next/image";
 import { NavbarDemo } from "@/components/edits/NavbarDemo";
 import BackgroundVideo from "@/components/edits/BackgroundVideo";
 import { HeroScrollDemo } from "@/components/edits/HeroScrollDemo";
-import styles from "./page.module.css";
 import { BackgroundBeamsDemo } from "@/components/edits/BackgroundBeamsDemo";
 import { AnimatedPinDemo } from "@/components/edits/AnimatedPinDemo";
 import { BackgroundGradientDemo } from "@/components/edits/BackgroundGradientDemo";
@@ -24,38 +23,36 @@ import LocomotiveScroll from "locomotive-scroll";
 import ProjectSectionDemo from "@/components/edits/projectSection/ProjectSectionDemo";
 import ServiceSectionTest from "@/components/edits/serviceSection/ServiceSectionTest";
 import { CardHoverEffectDemo } from "@/components/edits/CardHoverEffectDemo";
+import "./globals.css";
 
 export default function Home() {
-
   return (
     // <div>
-    //   <ContactSection />
+    //   <ScrollSection />
+    //   <HeroParallaxDemo />
     // </div>
-    
-
-    <div>
+    <div className="wholewebsitecontainer data-scroll-container">
       <div className="Landing Page">
         <NavbarDemo />
         <BackgroundVideo />
-        <HeroScrollDemo />
       </div>
+      <HeroScrollDemo />
       <ServiceSectionTest />
       <HeroParallaxDemo />
       <LogoMarqueeDemo />
       <div className="h-screen w-full overflow-hidden">
       {/* Put contact section here */}
       <ContactSection/>
-      
+
       </div>
-      <div className="h-screen w-full bg-black">
+      <div className="h-full w-full bg-black">
       <CardHoverEffectDemo />
       </div>
       <div className=" h-screen w-full">
       <TestimonialSectionScroll />
       </div>
       <div className=" h-screen w-full">
-        </div>
-      
+      </div>
       <div className="overflow-hidden">
       <BackgroundScrollVideo />
       </div>
