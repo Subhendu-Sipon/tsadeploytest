@@ -104,42 +104,10 @@ function BackgroundScrollVideo() {
               </Link>
             </div>
             <div className="flex justify-center space-x-6 mt-64 w-1/3">
-              <a
-                href="https://www.linkedin.com"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillLinkedin className="h-8 w-8" />
-              </a>
-              <a
-                href="https://www.instagram.com"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram className="h-8 w-8" />
-              </a>
-              <a
-                href="https://www.youtube.com"
-                aria-label="YouTube"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillYoutube className="h-8 w-8" />
-              </a>
-              <a
-                href="https://www.facebook.com"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillFacebook className="h-8 w-8" />
-              </a>
+            
             </div>
-            <div className="mt-64 w-1/3 text-right">
-              <p className="text-sm">Proudly created in India.</p>
-              <p className="text-sm">All Right Reserved.</p>
+            <div className="mt-64 w-1/3 text-center">
+              <p className="text-sm">Proudly created in India. All Right Reserved.</p>
             </div>
           </div>
         </div>

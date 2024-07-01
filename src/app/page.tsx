@@ -25,11 +25,19 @@ import { CardHoverEffectDemo } from "@/components/edits/CardHoverEffectDemo";
 import "./globals.css";
 import BentoGridDemo from "@/components/edits/BentoGridDemo";
 import MenuDemo from "@/components/edits/menu/menudemo";
+import FloatingMorphedMenu from "@/components/edits/FloatingMorphedMenu/FloatingMorphedMenu";
 
 export default function Home() {
   return (
 
+    // <div>
+    //   <FloatingMorphedMenu />
+    // </div>
+
+
     <div className="wholewebsitecontainer data-scroll-container">
+      <FloatingMorphedMenu />
+      
       <MenuDemo/>
       <div className="Landing Page">
         <BackgroundVideo />
