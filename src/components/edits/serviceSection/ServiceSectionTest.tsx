@@ -59,7 +59,7 @@ export default function ServiceSectionTest() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[35rem] [perspective:1000px] relative b flex flex-col max-w-6xl mx-auto w-[180rem]  items-center justify-center my-20">
+    <div className="h-[20rem] md:h-[35rem] [perspective:1000px] relative b flex flex-col max-w-7xl mx-auto items-center justify-center mb-20">
       <Tabs tabs={tabs} />
     </div>
   );

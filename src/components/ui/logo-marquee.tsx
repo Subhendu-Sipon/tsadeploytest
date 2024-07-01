@@ -2,7 +2,7 @@ import React from 'react';
 import FastMarquee from 'react-fast-marquee';
 import Image from 'next/image';
 import MarqueeLogo1 from '@/assets/MarqueeImg/Monte carlo dp.jpg';
-import MarqueeLogo2 from '@/assets/MarqueeImg/daivik ratnam white.png';
+import MarqueeLogo2 from '@/assets/MarqueeImg/NobgTrial1.png';
 import MarqueeLogo3 from '@/assets/MarqueeImg/abs.png';
 import MarqueeLogo4 from '@/assets/MarqueeImg/SuruchiBazarNoBg.png';
 import MarqueeLogo5 from '@/assets/MarqueeImg/drm_round.jpg'
@@ -21,7 +21,7 @@ const LogoMarquee = () => {
       {logos.map((logo, index) => (
         <div 
           key={index} 
-          className='logo-container h-40 w-40 object-cover grayscale hover:grayscale-0 rounded m-10 bg-white outline-2 outline-pink-500 flex items-center justify-center'
+          className='logo-container h-40 w-40 object-cover hover:grayscale-0 rounded m-10 bg-transparent outline-2 outline-pink-500 flex items-center justify-center'
         >
           <a href={logo.link}>
           <Image 

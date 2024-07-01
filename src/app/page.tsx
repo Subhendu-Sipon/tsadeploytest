@@ -24,6 +24,7 @@ import ProjectSectionDemo from "@/components/edits/projectSection/ProjectSection
 import ServiceSectionTest from "@/components/edits/serviceSection/ServiceSectionTest";
 import { CardHoverEffectDemo } from "@/components/edits/CardHoverEffectDemo";
 import "./globals.css";
+import BentoGridDemo from "@/components/edits/BentoGridDemo";
 
 export default function Home() {
   return (
@@ -37,22 +38,24 @@ export default function Home() {
         <BackgroundVideo />
       </div>
       <HeroScrollDemo />
-      <ServiceSectionTest />
-      <HeroParallaxDemo />
       <LogoMarqueeDemo />
-      <div className="h-screen w-full overflow-hidden">
-      {/* Put contact section here */}
-      <ContactSection/>
-
-      </div>
-      <div className="h-full w-full bg-black">
-      <CardHoverEffectDemo />
-      </div>
       <div className=" h-screen w-full">
       <TestimonialSectionScroll />
       </div>
       <div className=" h-screen w-full">
       </div>
+      <ServiceSectionTest />
+      {/* <HeroParallaxDemo /> */}
+      <div className="h-full w-full overflow-hidden">
+      {/* Put contact section here */}
+      {/* <ContactSection/> */}
+      <BentoGridDemo />
+
+      </div>
+      <div className="h-full w-full bg-black">
+      {/* <CardHoverEffectDemo /> */}
+      </div>
+      
       <div className="overflow-hidden">
       <BackgroundScrollVideo />
       </div>
