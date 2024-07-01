@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { NavbarDemo } from "@/components/edits/NavbarDemo";
 import BackgroundVideo from "@/components/edits/BackgroundVideo";
 import { HeroScrollDemo } from "@/components/edits/HeroScrollDemo";
 import { BackgroundBeamsDemo } from "@/components/edits/BackgroundBeamsDemo";
@@ -25,16 +24,14 @@ import ServiceSectionTest from "@/components/edits/serviceSection/ServiceSection
 import { CardHoverEffectDemo } from "@/components/edits/CardHoverEffectDemo";
 import "./globals.css";
 import BentoGridDemo from "@/components/edits/BentoGridDemo";
+import MenuDemo from "@/components/edits/menu/menudemo";
 
 export default function Home() {
   return (
-    // <div>
-    //   <ScrollSection />
-    //   <HeroParallaxDemo />
-    // </div>
+
     <div className="wholewebsitecontainer data-scroll-container">
+      <MenuDemo/>
       <div className="Landing Page">
-        <NavbarDemo />
         <BackgroundVideo />
       </div>
       <HeroScrollDemo />
@@ -42,7 +39,7 @@ export default function Home() {
       <div className=" h-screen w-full">
       <TestimonialSectionScroll />
       </div>
-      <div className=" h-screen w-full">
+      <div className=" h-screen w-full bg-blue-300">
       </div>
       <ServiceSectionTest />
       {/* <HeroParallaxDemo /> */}

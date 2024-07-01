@@ -72,16 +72,6 @@ const MenuDemo = () => {
   return (
     <div className="menu-container" ref={container}>
       <div className="menu-bar">
-        <div className="menu-logo">
-          <Link href="/">
-            <Image
-              src={LogoImage}
-              alt="logo"
-              height="64"
-              width="64"
-            />
-          </Link>
-        </div>
         <div className="menu-open text-white " onClick={toggleMenu}>
           <GiHamburgerMenu size={32}/>
         </div>

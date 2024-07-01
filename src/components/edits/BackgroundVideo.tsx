@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './BackgroundVideo.module.css'
 import { TypewriterEffect } from '../ui/type-writer-effect';
+import Image from 'next/image';
+import SiteLogoImage from "@/assets/TSALogoNoBg.png";
 
 const BackgroundVideo = () => {
     const words = [
@@ -19,6 +21,14 @@ const BackgroundVideo = () => {
     ];
     return (
         <div className={styles.main}>
+            <div className='absolute text-white z-50 p-5'>
+            <Image
+              src={SiteLogoImage}
+              alt="logo"
+              height="72"
+              width="72"
+            />
+            </div>
             
             <div className={styles.overlay}></div>
             

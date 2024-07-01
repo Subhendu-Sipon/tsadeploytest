@@ -76,7 +76,7 @@ function BackgroundScrollVideo() {
         muted
       />
 
-      <div ref={footerRef} className="fixed h-[100px] bg-blue-300 bottom-0 w-full"></div>
+      <div ref={footerRef} className="fixed h-[100px] bg-blue-400 bottom-0 w-full"></div>
 
       <footer
         ref={textRef}
