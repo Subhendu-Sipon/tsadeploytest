@@ -18,18 +18,18 @@ export default function FloatingMorphedMenu() {
           />
         </div>
         <div className="flex dibbekapapa">
-          <div className="dibbekadibba p-4">
-            <Link href="www.linkedln.com">LinkedIn</Link>
-          </div>
-          <div className="dibbekadibba p-4 ">
-            <Link href="www.facebook.com">Facebook</Link>
-          </div>
-          <div className="dibbekadibba p-4 ">
-            <Link href="www.instagram.com">Instagram</Link>
-          </div>
-          <div className="dibbekadibba p-4 ">
-            <Link href="www.whatsapp.com">Whatsapp</Link>
-          </div>
+          <Link href="www.linkedln.com">
+            <div className="dibbekadibba p-4">LinkedIn</div>
+          </Link>
+          <Link href="www.facebook.com">
+            <div className="dibbekadibba p-4 ">Facebook</div>
+          </Link>
+          <Link href="www.instagram.com">
+            <div className="dibbekadibba p-4 ">Instagram</div>
+          </Link>
+          <Link href="www.whatsapp.com">
+            <div className="dibbekadibba p-4 ">Whatsapp</div>
+          </Link>
         </div>
       </div>
     </div>

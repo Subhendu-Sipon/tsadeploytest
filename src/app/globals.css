@@ -7,7 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
 
-
 .no-visible-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -32,4 +31,9 @@
 
 html{
 scrollbar-width: none;
+}
+
+
+*{
+  cursor: none;
 }

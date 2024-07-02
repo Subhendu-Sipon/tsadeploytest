@@ -26,6 +26,7 @@ import "./globals.css";
 import BentoGridDemo from "@/components/edits/BentoGridDemo";
 import MenuDemo from "@/components/edits/menu/menudemo";
 import FloatingMorphedMenu from "@/components/edits/FloatingMorphedMenu/FloatingMorphedMenu";
+import FlareCursor from "@/components/edits/FlareCursor/FlareCursor";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
 
 
     <div className="wholewebsitecontainer data-scroll-container">
+      <FlareCursor />
       <FloatingMorphedMenu />
       
       <MenuDemo/>
