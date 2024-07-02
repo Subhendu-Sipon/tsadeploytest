@@ -9,7 +9,9 @@ function FlareCursor() {
   const [isVideoHover, setIsVideoHover] = useState(false);
   const [text, setText] = useState("");
   const [imageClickCount, setImageClickCount] = useState(0);
+  const [videoClickCount, setVideoClickCount] = useState(0);
   const imageRef = useRef(null);
+  const videoRef = useRef(null);
 
   const handleMouseMove = (e) => {
     setPosition({ x: e.clientX, y: e.clientY });
@@ -31,6 +33,9 @@ function FlareCursor() {
     if (e.target.tagName === "IMG") {
       setImageClickCount((prevCount) => prevCount + 1);
     }
+    if (e.target.tagName === "VIDEO") {
+      setVideoClickCount((prevCount) => prevCount + 1);
+    }
   };
 
   useEffect(() => {
@@ -51,15 +56,19 @@ function FlareCursor() {
       ? 60
       : 50
     : isVideoHover
-    ? 80
+    ? videoClickCount % 2 === 0
+      ? 80
+      : 50
     : 10;
   const cursorText = isImageHover
     ? imageClickCount % 2 === 0
       ? "Click to Zoom"
       : "Zoom Out"
+    : isVideoHover
+    ? videoClickCount % 2 === 0
+      ? "Click to Play"
+      : "Playing"
     : "";
-
-    
 
   return (
     <div
@@ -121,8 +130,9 @@ function FlareCursor() {
             fontWeight: "bold",
             color: "#000",
           }}
+          ref={videoRef}
         >
-          &#9654;{/* play */}
+          {videoClickCount % 2 === 0 ? "\u25B6" : "\u2716"}
         </span>
       )}
     </div>

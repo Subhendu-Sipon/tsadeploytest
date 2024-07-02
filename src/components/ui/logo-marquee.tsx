@@ -34,7 +34,7 @@ const LogoMarquee = () => {
       {logos.map((logo, index) => (
         <div 
           key={index} 
-          className='logo-container w-40 object-cover hover:grayscale-0 rounded m-10 bg-transparent outline-2 outline-pink-500 flex items-center justify-center'
+          className='logo-container w-40 object-cover hover:grayscale-0 rounded mx-10 bg-transparent outline-2 outline-pink-500 flex items-center justify-center'
         >
           <a href={logo.link}>
           <Image 
@@ -52,7 +52,7 @@ const LogoMarquee = () => {
     {logos2.map((logo, index) => (
       <div 
         key={index} 
-        className='logo-container  w-40 object-cover hover:grayscale-0 rounded m-10 bg-transparent outline-2 outline-pink-500 flex items-center justify-center'
+        className='logo-container  w-40 object-cover hover:grayscale-0 rounded mx-10 bg-transparent outline-2 outline-pink-500 flex items-center justify-center'
       >
         <a href={logo.link}>
         <Image 
