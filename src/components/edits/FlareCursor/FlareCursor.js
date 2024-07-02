@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./FlareCursor.css";
 
 function FlareCursor() {
@@ -6,8 +6,10 @@ function FlareCursor() {
   const [isPointer, setIsPointer] = useState(false);
   const [isTextHover, setIsTextHover] = useState(false);
   const [isImageHover, setIsImageHover] = useState(false);
-  const [isVideoHover, setIsVideoHover] = useState(false); // new state
+  const [isVideoHover, setIsVideoHover] = useState(false);
   const [text, setText] = useState("");
+  const [imageClickCount, setImageClickCount] = useState(0);
+  const imageRef = useRef(null);
 
   const handleMouseMove = (e) => {
     setPosition({ x: e.clientX, y: e.clientY });
@@ -17,7 +19,7 @@ function FlareCursor() {
     );
     setIsTextHover(target.tagName === "A" || target.tagName === "SPAN");
     setIsImageHover(target.tagName === "IMG");
-    setIsVideoHover(target.tagName === "VIDEO"); // check if hovering over VIDEO element
+    setIsVideoHover(target.tagName === "VIDEO");
     if (isTextHover) {
       setText("Hello");
     } else {
@@ -25,23 +27,48 @@ function FlareCursor() {
     }
   };
 
+  const handleClick = (e) => {
+    if (e.target.tagName === "IMG") {
+      setImageClickCount((prevCount) => prevCount + 1);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("click", handleClick);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("click", handleClick);
     };
   }, []);
 
-  const flareSize = isPointer ? 0 : isTextHover ? 50 : isImageHover ? 70 : isVideoHover ? 80 : 30;
-  const cursorStyle = isPointer
-    ? { left: "-100px", top: "-100px" }
-    : {};
+  const flareSize = isPointer
+    ? 0
+    : isTextHover
+    ? 50
+    : isImageHover
+    ? imageClickCount % 2 === 0
+      ? 60
+      : 50
+    : isVideoHover
+    ? 80
+    : 10;
+  const cursorText = isImageHover
+    ? imageClickCount % 2 === 0
+      ? "Click to Zoom"
+      : "Zoom Out"
+    : "";
+
+    
 
   return (
     <div
-      className={`flare ${isPointer ? "pointer" : ""} ${isTextHover ? "text-hover" : ""} ${isImageHover ? "image-hover" : ""} ${isVideoHover ? "video-hover" : ""}`}
+      className={`flare ${isPointer ? "pointer" : ""} ${
+        isTextHover ? "text-hover" : ""
+      } ${isImageHover ? "image-hover" : ""} ${
+        isVideoHover ? "video-hover" : ""
+      }`}
       style={{
-        ...cursorStyle,
         left: `${position.x}px`,
         top: `${position.y}px`,
         width: `${flareSize}px`,
@@ -71,13 +98,15 @@ function FlareCursor() {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%) scale(1.2)",
-            fontSize: "12px",
+            transform: "translate(-50%, -50%)",
+            fontSize: "8px",
             fontWeight: "normal",
             color: "#000",
+            textAlign: "center",
           }}
+          ref={imageRef}
         >
-          Click Zoom
+          {cursorText}
         </span>
       )}
       {isVideoHover && (
@@ -93,7 +122,7 @@ function FlareCursor() {
             color: "#000",
           }}
         >
-          &#9654;{/* play icon */}
+          &#9654;{/* play */}
         </span>
       )}
     </div>

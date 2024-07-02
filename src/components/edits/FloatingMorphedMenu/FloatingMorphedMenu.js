@@ -1,6 +1,6 @@
 import React from "react";
 import "./FloatingMorphedMenu.css";
-import SiteLogoJadu from "@/assets/TSA whiteLogo.jpg";
+import SiteLogoJadu from "@/assets/SiteLogo.gif";
 import Image from "next/image";
 import Link from "next/link";
 
