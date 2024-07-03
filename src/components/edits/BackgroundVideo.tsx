@@ -8,15 +8,15 @@ const BackgroundVideo = () => {
     const words = [
         {
             text: "The",
-            className: "text-white dark:text-white",
+            className: "text-white dark:text-white font-poppins font-bold",
         },
         {
             text: "Social",
-            className: "text-white dark:text-white",
+            className: "text-white dark:text-white font-poppins font-bold",
         },
         {
             text: "Ants",
-            className: "text-blue-500 dark:text-blue-500",
+            className: "text-blue-500 dark:text-blue-500 font-poppins font-bold",
         },
     ];
     return (
@@ -39,7 +39,7 @@ const BackgroundVideo = () => {
                 <TypewriterEffect words={words} />
                 <br />
                 <div className={styles.landingtextdesc}>
-                    <p className='text-ldescription sm:text-xl md:text-2xl lg:text-2xl  text-center '>
+                    <p className='text-ldescription sm:text-xl md:text-2xl lg:text-2xl font-poppins font-thin text-center '>
                         Innovate-Create-Elevate
                     </p>
                 </div>

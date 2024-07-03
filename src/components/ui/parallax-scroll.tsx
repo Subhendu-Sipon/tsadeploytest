@@ -75,7 +75,7 @@ export const ParallaxScroll = ({ items, className }) => {
               ) : (
                 <Image
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
+                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
                   height="400"
                   width="400"
                   alt="image thumbnail"
@@ -104,7 +104,7 @@ export const ParallaxScroll = ({ items, className }) => {
               ) : (
                 <Image
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
+                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
                   height="400"
                   width="400"
                   alt="image thumbnail"
@@ -133,7 +133,7 @@ export const ParallaxScroll = ({ items, className }) => {
               ) : (
                 <Image
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
+                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
                   height="400"
                   width="400"
                   alt="image thumbnail"
@@ -174,7 +174,7 @@ export const ParallaxScroll = ({ items, className }) => {
                 <div className="max-w-[97%} mx-auto">
                 <Image
                   src={selectedItem.src}
-                  className="h-full w-full object-cover object-left-top rounded-lg"
+                  className="h-full w-full object-cover object-left-top rounded-lg designbuttonkadibba"
                   height="1080"
                   width="2180"
                   alt="image"

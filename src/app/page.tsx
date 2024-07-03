@@ -46,10 +46,10 @@ export default function Home() {
       </div>
       <HeroScrollDemo />
       <LogoMarqueeDemo />
-      <div className=" h-screen w-full">
+      <div className=" h-full w-full">
       <TestimonialSectionScroll />
       </div>
-      <div className=" h-screen w-full bg-blue-300">
+      <div className=" h-full w-full bg-blue-300">
       </div>
       <ServiceSectionTest />
       {/* <HeroParallaxDemo /> */}

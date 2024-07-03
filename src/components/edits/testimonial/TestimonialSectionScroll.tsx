@@ -100,8 +100,8 @@ function TestimonialSectionScroll() {
     <div className="overflow-hidden">
       <div ref={mainRef} className="h-screen bg-blue-300 grid content-center">
         <div className="h-32 content-center pl-10">
-          <h1 style={{ fontSize: "3vw" }} className="font-oswald">
-            What People Say About Us
+          <h1 style={{ fontSize: "3vw" }} className="font-poppins">
+            
           </h1>
         </div>
         <div className="eyesection">

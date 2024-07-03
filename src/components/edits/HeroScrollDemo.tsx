@@ -14,9 +14,9 @@ export function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-page2head font-semibold text-white dark:text-white">
+            <h1 className="text-page2head font-semibold font-poppins text-white dark:text-white">
               Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+              <span className="text-4xl md:text-[6rem] font-poppins font-bold mt-1 leading-none">
                 Social Ants
               </span>
             </h1>

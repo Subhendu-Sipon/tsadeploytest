@@ -18,6 +18,7 @@ const config = {
     fontFamily:{
       oswald : ["Oswald", "sans-serif"],
       kanit : ["Kanit", "sans-serif"],
+      poppins : ["Poppins", "sans-serif"]
     },
 
     fontSize: {
@@ -40,7 +41,7 @@ const config = {
       'ldescription': ['1.8rem', {
         lineHeight: '5rem',
         letterSpacing: '0.0em',
-        fontWeight: '200',
+        fontWeight: '100',
       }],
 
       'page2head': ['2.5rem', {
