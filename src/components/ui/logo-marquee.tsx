@@ -1,30 +1,51 @@
 import React from 'react';
 import FastMarquee from 'react-fast-marquee';
 import Image from 'next/image';
-import MarqueeLogo1 from '@/assets/MarqueeImg/Monte carlo dp.jpg';
-import MarqueeLogo2 from '@/assets/MarqueeImg/NobgTrial1.png';
-import MarqueeLogo3 from '@/assets/MarqueeImg/abs.png';
-import MarqueeLogo4 from '@/assets/MarqueeImg/SuruchiBazarNoBg.png';
-import MarqueeLogo5 from '@/assets/MarqueeImg/drm_round.jpg'
+import MarqueeLogo1 from '@/assets/logomarquee/abs.svg';
+import MarqueeLogo2 from '@/assets/logomarquee/Pranati-Brand-Logo-1.svg';
+import MarqueeLogo3 from '@/assets/logomarquee/champion.svg';
+import MarqueeLogo4 from '@/assets/logomarquee/clouddesk.svg';
+import MarqueeLogo5 from '@/assets/logomarquee/daewoo.svg';
+import MarqueeLogo6 from '@/assets/logomarquee/dakshin.svg';
+import MarqueeLogo7 from '@/assets/logomarquee/dr.svg';
+import MarqueeLogo8 from '@/assets/logomarquee/duramix.svg';
+import MarqueeLogo9 from '@/assets/logomarquee/ecs.svg';
+import MarqueeLogo10 from '@/assets/logomarquee/fanddlogo.svg';
+import MarqueeLogo11 from '@/assets/logomarquee/grc.svg';
+import MarqueeLogo12 from '@/assets/logomarquee/hiline.svg';
+import MarqueeLogo13 from '@/assets/logomarquee/india cup.svg';
+import MarqueeLogo14 from '@/assets/logomarquee/karigar.svg';
+import MarqueeLogo15 from '@/assets/logomarquee/odishamaritime.svg';
+import MarqueeLogo16 from '@/assets/logomarquee/odra.svg';
+import MarqueeLogo17 from '@/assets/logomarquee/piaggio.svg';
+import MarqueeLogo18 from '@/assets/logomarquee/sanskaar.svg';
+import MarqueeLogo19 from '@/assets/logomarquee/sirman.svg';
+import MarqueeLogo20 from '@/assets/logomarquee/srinath.svg';
 import { left, right } from '@popperjs/core';
 
 const logos = [
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641c0497c240b1be1b31ec11_Frame%201430102672%20(3).svg", alt: 'Monte Carlo Logo', link: 'https://montecarlo.in' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/64149378ab4ce51422a87095_NVIDIA%20svg%20(3).svg", alt: 'Daivik Ratnam Logo', link: 'https://daivikratnam.com' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf7f702e8cc4d3498b5b4_Walmart%20svg.svg", alt: 'ABS Logo', link: 'https://anilbalajisteel.com'},
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf40774e09707a8fc2ef5_Expedia%20svg.svg", alt: 'Suruchi Bazar Logo', link: '#' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf3c3ab258130428e0d63_Licious.svg", alt: 'Demo1', link: 'https://duramix.in/' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf343523aa2c8804e16fb_hotstar.svg", alt: 'Demo2', link: 'https://duramix.in/' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bfbe2683a5868a8b058d1_Frame%201430102671.svg", alt: 'Demo3', link: 'https://duramix.in/' },
+  { src: MarqueeLogo1, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo2, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo3, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo4, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo5, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo6, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo7, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo8, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo9, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo10, alt: 'Monte Carlo Logo', link: '' },
 ];
 const logos2 = [
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641c0497c240b1be1b31ec11_Frame%201430102672%20(3).svg", alt: 'Monte Carlo Logo', link: 'https://montecarlo.in' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/64149378ab4ce51422a87095_NVIDIA%20svg%20(3).svg", alt: 'Daivik Ratnam Logo', link: 'https://daivikratnam.com' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf7f702e8cc4d3498b5b4_Walmart%20svg.svg", alt: 'ABS Logo', link: 'https://anilbalajisteel.com'},
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf40774e09707a8fc2ef5_Expedia%20svg.svg", alt: 'Suruchi Bazar Logo', link: '#' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf3c3ab258130428e0d63_Licious.svg", alt: 'Demo1', link: 'https://duramix.in/' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bf343523aa2c8804e16fb_hotstar.svg", alt: 'Demo2', link: 'https://duramix.in/' },
-  { src: "https://assets-global.website-files.com/624629162e6c5c363b391aee/641bfbe2683a5868a8b058d1_Frame%201430102671.svg", alt: 'Demo3', link: 'https://duramix.in/' },
+  { src: MarqueeLogo11, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo12, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo13, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo14, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo15, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo16, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo17, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo18, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo19, alt: 'Monte Carlo Logo', link: '' },
+  { src: MarqueeLogo20, alt: 'Monte Carlo Logo', link: '' },
 ];
 
 const LogoMarquee = () => {
