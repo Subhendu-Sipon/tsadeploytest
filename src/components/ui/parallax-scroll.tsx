@@ -64,7 +64,7 @@ export const ParallaxScroll = ({ items, className }) => {
               {item.type === "video" ? (
                 <video
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
+                  className="h-80 w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
                   height="400"
                   width="400"
                   autoPlay
@@ -75,7 +75,7 @@ export const ParallaxScroll = ({ items, className }) => {
               ) : (
                 <Image
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
+                  className="h-80 w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
                   height="400"
                   width="400"
                   alt="image thumbnail"
@@ -94,7 +94,7 @@ export const ParallaxScroll = ({ items, className }) => {
               {item.type === "video" ? (
                 <video
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
+                  className="h-80 w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
                   height="400"
                   width="400"
                   loop
@@ -104,7 +104,7 @@ export const ParallaxScroll = ({ items, className }) => {
               ) : (
                 <Image
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
+                  className="h-80 w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
                   height="400"
                   width="400"
                   alt="image thumbnail"
@@ -123,7 +123,7 @@ export const ParallaxScroll = ({ items, className }) => {
               {item.type === "video" ? (
                 <video
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
+                  className="h-80 w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0 shadow-2xl"
                   height="400"
                   width="400"
                   autoPlay
@@ -133,7 +133,7 @@ export const ParallaxScroll = ({ items, className }) => {
               ) : (
                 <Image
                   src={item.src}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
+                  className="h-80 w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0 shadow-2xl designbuttonkadibba"
                   height="400"
                   width="400"
                   alt="image thumbnail"

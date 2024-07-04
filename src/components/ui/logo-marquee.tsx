@@ -51,7 +51,7 @@ const logos2 = [
 const LogoMarquee = () => {
   return (
     <div>
-    <FastMarquee speed={100} pauseOnHover={true} direction="right">
+    <FastMarquee speed={100} direction="right">
       {logos.map((logo, index) => (
         <div 
           key={index} 
@@ -69,7 +69,7 @@ const LogoMarquee = () => {
         </div>
       ))}
     </FastMarquee>
-    <FastMarquee speed={50} pauseOnHover={true} direction="left">
+    <FastMarquee speed={50} direction="left">
     {logos2.map((logo, index) => (
       <div 
         key={index} 
